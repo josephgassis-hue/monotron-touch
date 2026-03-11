@@ -30,16 +30,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-```
-
-Replace `your-branch-name` with whatever branch you're working on — probably `main` or whatever you named it.
-
-**Step 4 — Configure GitHub Pages in the repo settings**
-
-Go to your repo on GitHub → Settings → Pages. Under "Build and deployment", set the source to **Deploy from a branch**, and select the `gh-pages` branch, `/ (root)` folder. That branch doesn't exist yet — the Action will create it on first run.
-
-**Step 5 — Push everything**
-
-Commit all the new files and push. Go to the Actions tab in your repo and watch the workflow run. When it goes green, your app will be live at:
-```
-https://your-github-username.github.io/your-repo-name/
